@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "preview-subpath",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "BASE_PATH=/postgresql-access-policy-landing-page npm run build && BASE_PATH=/postgresql-access-policy-landing-page npx astro preview --port 4322"],
+      "port": 4322
+    }
+  ]
+}

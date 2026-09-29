@@ -1,0 +1,56 @@
+# Landing page content. Edit, commit, push — the site rebuilds automatically.
+#
+# Each tile needs: title, description, url, and EITHER
+#   icon:  an Iconify name (browse https://icones.js.org — sets "lucide" and "simple-icons" are installed)
+#   image: your own icon (png/jpg/svg/webp) in src/data/icons/, e.g. ./icons/my-app.png
+# Optional: highlight: true  -> wider, accented tile (use for the presentation)
+# Tiles appear in the order listed. Add a divider between groups with:  - section: <label>
+
+title: Postgres Access Policy
+subtitle: Practical Tips
+footer: ""
+
+tiles:
+  - title: Presentation
+    description: Slides from the Prague PostgreSQL Meetup talk on 30 September 2026
+    url: https://docs.google.com/presentation/d/1mAA0ISKPjho5xSCz1Yw8aapCyUyk0dP3MYLh1e4Xwuc/edit?usp=sharing
+    icon: lucide:presentation
+    highlight: true
+
+  - title: pgCowboy
+    description: Desktop app for maintaining PostgreSQL roles across many clusters. Keep your clusters grouped, then pick the group(s) and adjust a role against them.
+    url: https://michal-bartak.github.io/pgcowboy/
+    image: ./icons/pgcowboy.png
+
+  - title: pgEvidence
+    description: Runs a set of custom SQL queries against PostgreSQL one by one creating evidence data (screenshot, video, and checksumed result files) you can hand to an auditor.
+    url: https://michal-bartak.github.io/PgEvidence/
+    image: ./icons/pgevidence.png
+
+  - title: pgDump Splitter
+    description: Splits a PostgreSQL dump file into multiple files. Useful for version control and auditing.
+    url: https://github.com/michal-bartak/pgdump_splitter
+    image: ./icons/pgdump-splitter.svg
+
+  - section: Affiliated apps
+
+  - title: OmniDB [Resurrected]
+    description: Open-source database management tool — lightweight, fast, and collaborative. Web-based GUI for PostgreSQL with schema browser, query editor, data explorer, and multi-user support."
+    url: https://www.omnidb.net
+    image: ./icons/omnidb.svg
+
+  - title: pgAdmin III [Resurrected]
+    description: GUI administration tool for PostgreSQL. Available via pre-compiled app or Homebrew installation.
+    url: https://pgadmin3.80.cz
+    image: ./icons/pgadmin3.png
+
+  - title: pgDBML
+    description: Export PostgreSQL schemas to DBML format for diagramming. Connect directly to a database or parse pg_dump output. Generates clean DBML ready for dbdiagram.io, Mermaid, or other visualization tools.
+    url: https://pg_dbml.80.cz
+    image: ./icons/pg_dbml.svg
+
+  - title: More
+    description: More PostgreSQL projects and tools
+    url: https://www.80.cz/projects/
+    icon: lucide:layout-grid
+

@@ -1,0 +1,18 @@
+{
+  "name": "access-policy-landing-page",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.137",
+    "@iconify-json/simple-icons": "^1.2.98",
+    "astro": "^7.3.5",
+    "astro-icon": "^1.2.0",
+    "js-yaml": "^5.4.2"
+  }
+}
