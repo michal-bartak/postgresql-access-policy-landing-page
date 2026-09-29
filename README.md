@@ -17,6 +17,8 @@ tiles:
     url: https://docs.google.com/presentation/d/...
     icon: lucide:presentation
     highlight: true          # optional — full-width accent tile
+    disabled: true           # optional — shown but not clickable, labelled "Coming soon"
+                             #            (or disabled: Available tomorrow)
 
   - title: Policy Editor
     description: Author and review access policies

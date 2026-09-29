@@ -10,18 +10,23 @@ interface Props {
   icon?: string;
   image?: ImageMetadata;
   highlight?: boolean;
+  disabled?: boolean | string;
 }
 
-const { title, description, url, icon, image, highlight } = Astro.props;
+const { title, description, url, icon, image, highlight, disabled } = Astro.props;
+const badge = disabled === true ? 'Coming soon' : disabled || '';
+const Tag = badge ? 'div' : 'a';
+const linkAttrs = badge ? { 'aria-disabled': 'true' } : { href: url, target: '_blank', rel: 'noopener noreferrer' };
 ---
 
-<a class:list={['tile', { highlight }]} href={url} target="_blank" rel="noopener noreferrer">
+<Tag class:list={['tile', { highlight, disabled: badge }]} {...linkAttrs}>
   <span class="media" aria-hidden="true">
     {icon ? <Icon name={icon} /> : image && <Image src={image} alt="" width={104} height={104} />}
   </span>
   <span class="text">
     <span class="title">{title}</span>
+    {badge && <span class="badge">{badge}</span>}
     <span class="description">{description}</span>
   </span>
-  <span class="arrow" aria-hidden="true"><Icon name="lucide:arrow-up-right" /></span>
-</a>
+  {!badge && <span class="arrow" aria-hidden="true"><Icon name="lucide:arrow-up-right" /></span>}
+</Tag>

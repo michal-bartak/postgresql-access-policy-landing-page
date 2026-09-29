@@ -15,6 +15,8 @@ const tile = (image: SchemaContext['image']) =>
       // Your own icon/image, relative to landing.yaml, e.g. "./icons/my-app.png"
       image: image().optional(),
       highlight: z.boolean().default(false),
+      // Show the tile but make it non-clickable: true -> "Coming soon", or your own label text
+      disabled: z.union([z.boolean(), z.string()]).default(false),
     })
     .refine((t) => Boolean(t.icon) !== Boolean(t.image), {
       message: 'Each tile needs exactly one of "icon" or "image"',

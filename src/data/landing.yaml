@@ -4,6 +4,7 @@
 #   icon:  an Iconify name (browse https://icones.js.org — sets "lucide" and "simple-icons" are installed)
 #   image: your own icon (png/jpg/svg/webp) in src/data/icons/, e.g. ./icons/my-app.png
 # Optional: highlight: true  -> wider, accented tile (use for the presentation)
+#           disabled: true   -> shown but not clickable, labelled "Coming soon" (or disabled: <your label>)
 # Tiles appear in the order listed. Add a divider between groups with:  - section: <label>
 
 title: Postgres Access Policy
@@ -13,9 +14,10 @@ footer: ""
 tiles:
   - title: Presentation
     description: Slides from the Prague PostgreSQL Meetup talk on 30 September 2026
-    url: https://docs.google.com/presentation/d/1mAA0ISKPjho5xSCz1Yw8aapCyUyk0dP3MYLh1e4Xwuc/edit?usp=sharing
+    url: "https://michal-bartak.github.io/postgresql-access-policy-landing-page/"
     icon: lucide:presentation
     highlight: true
+    disabled: true   # remove this line once the slides are online (and set url to the slides)
 
   - title: pgCowboy
     description: Desktop app for maintaining PostgreSQL roles across many clusters. Keep your clusters grouped, then pick the group(s) and adjust a role against them.
