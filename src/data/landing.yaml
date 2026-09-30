@@ -1,6 +1,7 @@
 # Landing page content. Edit, commit, push — the site rebuilds automatically.
 #
-# Each tile needs: title, description, url, and EITHER
+# Each tile needs: title, description, url, and EITHER icon or image.
+#   url:   https://... or a file in src/data/, e.g. ./postgres_access_policy.pdf
 #   icon:  an Iconify name (browse https://icones.js.org — sets "lucide" and "simple-icons" are installed)
 #   image: your own icon (png/jpg/svg/webp) in src/data/icons/, e.g. ./icons/my-app.png
 # Optional: highlight: true  -> wider, accented tile (use for the presentation)
@@ -14,10 +15,9 @@ footer: ""
 tiles:
   - title: Presentation
     description: Slides from the Prague PostgreSQL Meetup talk on 30 September 2026
-    url: "https://michal-bartak.github.io/postgresql-access-policy-landing-page/"
+    url: ./postgres_access_policy.pdf
     icon: lucide:presentation
     highlight: true
-    disabled: true   # remove this line once the slides are online (and set url to the slides)
 
   - title: pgCowboy
     description: Desktop app for maintaining PostgreSQL roles across many clusters. Keep your clusters grouped, then pick the group(s) and adjust a role against them.

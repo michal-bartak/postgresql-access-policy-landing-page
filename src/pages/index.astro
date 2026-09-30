@@ -7,6 +7,19 @@ const entry = await getEntry('landing', 'landing');
 if (!entry) throw new Error('src/data/landing.yaml is missing');
 const { title, subtitle, footer, tiles } = entry.data;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Files in src/data that tiles can link to with a relative url ("./slides.pdf").
+const dataFiles = import.meta.glob<string>(['../data/**/*', '!../data/**/*.yaml'], {
+  query: '?url',
+  import: 'default',
+  eager: true,
+});
+const resolveUrl = (url: string) => {
+  if (!url.startsWith('./')) return url;
+  const file = dataFiles[`../data/${url.slice(2)}`];
+  if (!file) throw new Error(`landing.yaml: file "${url}" not found in src/data/`);
+  return file;
+};
 ---
 
 <!doctype html>
@@ -26,7 +39,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </header>
       <nav class="grid" aria-label="Links">
         {tiles.map((item) =>
-          item.kind === 'section' ? <h2 class="section">{item.section}</h2> : <Tile {...item} />
+          item.kind === 'section' ? <h2 class="section">{item.section}</h2> : <Tile {...item} url={resolveUrl(item.url)} />
         )}
       </nav>
       {footer && <footer>{footer}</footer>}

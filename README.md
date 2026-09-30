@@ -26,7 +26,11 @@ tiles:
     image: ./icons/editor.png # file in src/data/icons/
 ```
 
-Each tile needs `title`, `description`, `url` and **exactly one** of:
+Each tile needs `title`, `description`, `url` and **exactly one** of `icon` / `image` (below).
+
+`url` is either a full web address, or a file you put in `src/data/` written relative to `landing.yaml` — e.g. `url: ./postgres_access_policy.pdf`. Such files are published with the site; a wrong file name fails the build.
+
+Icon options:
 
 | Field   | Value                                                                 |
 |---------|-----------------------------------------------------------------------|

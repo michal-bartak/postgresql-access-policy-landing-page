@@ -9,7 +9,8 @@ const tile = (image: SchemaContext['image']) =>
       kind: z.literal('tile'),
       title: z.string(),
       description: z.string(),
-      url: z.url(),
+      // A web address, or a file next to landing.yaml, e.g. "./slides.pdf" (published with the site)
+      url: z.union([z.url(), z.string().startsWith('./', 'Use a full https:// address or a path like "./slides.pdf"')]),
       // Iconify name, e.g. "lucide:presentation" or "simple-icons:github"
       icon: z.string().regex(/^[a-z0-9-]+:[a-z0-9-]+$/, 'Use an Iconify name like "lucide:book-open" (for your own files use image: ./icons/<file>)').optional(),
       // Your own icon/image, relative to landing.yaml, e.g. "./icons/my-app.png"
