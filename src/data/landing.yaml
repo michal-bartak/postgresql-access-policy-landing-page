@@ -25,7 +25,7 @@ tiles:
     image: ./icons/pgcowboy.png
 
   - title: pgEvidence
-    description: Runs a set of custom SQL queries against PostgreSQL one by one creating evidence data (screenshot, video, and checksumed result files) you can hand to an auditor.
+    description: Runs a set of custom SQL queries against PostgreSQL one by one creating evidence data (screenshots, video, and checksumed result files) you can hand to an auditor.
     url: https://michal-bartak.github.io/PgEvidence/
     image: ./icons/pgevidence.png
 
