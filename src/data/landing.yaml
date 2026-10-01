@@ -14,7 +14,7 @@ footer: ""
 
 tiles:
   - title: Presentation
-    description: Slides from the Prague PostgreSQL Meetup talk on 30 September 2026
+    description: Slides (PDF) from the Prague PostgreSQL Meetup talk on 30 September 2026
     url: ./postgres_access_policy.pdf
     icon: lucide:presentation
     highlight: true
